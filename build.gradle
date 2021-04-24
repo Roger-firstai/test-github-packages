@@ -18,6 +18,19 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven{
+            url "/Users/luoshijie/work/studioProj/TestGithubPackages/repository"
+        }
+    }
+}
+
+subprojects {
+    afterEvaluate {
+        android {
+            buildFeatures{
+                dataBinding true
+            }
+        }
     }
 }
 
