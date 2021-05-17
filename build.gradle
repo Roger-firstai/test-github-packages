@@ -23,8 +23,8 @@ allprojects {
             name = "test-github-packages"
             url = uri("https://maven.pkg.github.com/roger-firstai/test-github-packages")
             credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
             }
         }
 
