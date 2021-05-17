@@ -2,7 +2,6 @@ package com.xiaoxiao.testgithubpackages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
 import com.xiaoxiao.common.Calculate
 import com.xiaoxiao.testgithubpackages.databinding.ActivityMainBinding
 

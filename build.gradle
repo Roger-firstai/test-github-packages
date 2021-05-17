@@ -18,16 +18,23 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven{
-            url "/Users/luoshijie/work/studioProj/TestGithubPackages/repository"
+        mavenLocal()
+        maven {
+            name = "test-github-packages"
+            url = uri("https://maven.pkg.github.com/roger-firstai/test-github-packages")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
         }
+
     }
 }
 
 subprojects {
     afterEvaluate {
         android {
-            buildFeatures{
+            buildFeatures {
                 dataBinding true
             }
         }
